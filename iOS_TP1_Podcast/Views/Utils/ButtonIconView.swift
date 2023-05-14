@@ -20,7 +20,7 @@ struct ButtonIconView: View {
                 .foregroundColor(getIconColor())
                 .fontWeight(.bold)
         }
-            .frame(width: size, height: size)
+        .frame(width: size, height: size, alignment: .center)
             .background(getButtonColor())
             .cornerRadius(radius)
     }

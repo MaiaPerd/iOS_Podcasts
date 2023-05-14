@@ -11,10 +11,18 @@ struct BibliothequeView: View {
     var body: some View {
    
             NavigationView {
-                     List {
-                         
-                     }
-                     .navigationTitle("Podcast")
+               
+                    ScrollView{
+                        ListFilterView()
+                        VStack{
+                            Text("Mis à jour récemment").font(.title2).bold()
+                            GridView()
+                        }.padding(.vertical)
+                    
+                }.navigationTitle("Bibliothèque")
+                   
+                
+                    // .navigationTitle("Podcast")
                  }
            
         

@@ -16,7 +16,9 @@ struct JacquetView: View {
     
     var body: some View {
         VStack{
-            image.resizable().frame(width: 200,height: 200).cornerRadius(6)
+            image.resizable().frame(width: 200,height: 200)
+                .cornerRadius(6)
+                .shadow(radius: 10)
         
             Text(titre)
                 .fontWeight(.bold)
@@ -25,7 +27,7 @@ struct JacquetView: View {
             }
             Button(action: {}) {
                 Label(labelButton, systemImage: "play.fill").padding(EdgeInsets.init(top: 0, leading: 25, bottom: 0, trailing: 25)).fontWeight(.bold)
-            }.foregroundColor(.black)
+            }.foregroundColor(Colors.textColor)
                 .frame(width: 280,height: 50)
                 .background(Colors.secondaryBackground)
                 .cornerRadius(15)

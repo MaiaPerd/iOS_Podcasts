@@ -38,6 +38,6 @@ struct DescriptionView: View {
 
 struct DescriptionView_Previews: PreviewProvider {
     static var previews: some View {
-        DescriptionView(description: "", note: Float(0.0), nbVote: 0, genre: "")
+        DescriptionView(description: "decription", note: Float(0.0), nbVote: 0, genre: "")
     }
 }

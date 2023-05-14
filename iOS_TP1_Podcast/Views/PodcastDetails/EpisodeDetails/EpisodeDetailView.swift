@@ -33,7 +33,7 @@ struct EpisodeDetailView: View {
                 Spacer()
                 Image(systemName: "ellipsis").foregroundColor(.gray)
             }
-        }.frame(width: .infinity).padding()
+        }.padding(.horizontal)
     }
 }
 

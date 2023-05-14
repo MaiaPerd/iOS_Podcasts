@@ -12,16 +12,12 @@ struct EpisodesListView: View {
     var podcastListEpisodes: [PodcastEpisode]
     
     var body: some View {
-        VStack{
-            ScrollView{
-                 
+      
                 ForEach(0..<podcastListEpisodes.count) {i in
                     EpisodeDetailView(podcastEpisode: podcastListEpisodes[i])
-                    Divider()
+                    Divider().padding(.leading,15)
                 }.frame(maxWidth: .infinity,alignment: .leading)
-            }
-            
-        }
+        
        
     
     }

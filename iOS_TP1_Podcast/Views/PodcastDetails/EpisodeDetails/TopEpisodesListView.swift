@@ -18,12 +18,12 @@ struct TopEpisodesListView: View {
                     Label("Téléchargés", systemImage: "arrow.down").tag(EpisodeEnum.download)
                     Label("Non lus", systemImage: "circle").tag(EpisodeEnum.noRead)
                     Text("Tous les épisodes").tag(EpisodeEnum.allEpisode)
-                }.accentColor(.black)
+                }.accentColor(Colors.textColor)
             } label: {
                 Text(selectedEpisode.rawValue)
                     .font(.title2)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Colors.textColor)
                 Image(systemName: "chevron.down")
                     .foregroundColor(Colors.primary).fontWeight(.bold)
                    
@@ -33,7 +33,7 @@ struct TopEpisodesListView: View {
             Text("Tout voir").foregroundColor(Colors.primary)
         }.padding(.horizontal)
             .frame(height: 50)
-            .background(Color.white)
+            .background(Colors.background)
     }
 }
 

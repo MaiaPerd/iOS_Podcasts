@@ -27,7 +27,7 @@ struct ContentView: View {
                     Label("Explorer", systemImage: "square.grid.2x2.fill")
                 }
                 .tag(Tab.noConstruct)
-            PodcastsDetailView(podcats: PodcastStub.getPodcast())
+            BibliothequeView()
                 .tabItem {
                     Label("Bibliothèque", systemImage: "square.stack.fill")
                 }
@@ -38,7 +38,8 @@ struct ContentView: View {
                     Label("Recherche", systemImage: "magnifyingglass")
                 }
                 .tag(Tab.noConstruct)
-        }
+        }.accentColor(Colors.primary)
+            
     }
  
 }
