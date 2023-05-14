@@ -8,15 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection: Tab = .bibliotheque
+    
+    enum Tab {
+        case noConstruct
+        case bibliotheque
+    }
+
     var body: some View {
-        
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView(selection: $selection) {
+            NoView(title: "Écouter")
+                .tabItem {
+                    Label("Écouter", systemImage: "play.circle")
+                }
+                .tag(Tab.noConstruct)
+            NoView(title: "Explorer")
+                .tabItem {
+                    Label("Explorer", systemImage: "square.grid.2x2.fill")
+                }
+                .tag(Tab.noConstruct)
+            PodcastsDetailView(podcats: PodcastStub.getPodcast())
+                .tabItem {
+                    Label("Bibliothèque", systemImage: "square.stack.fill")
+                }
+                .tag(Tab.bibliotheque)
+
+            NoView(title: "Recherche")
+                .tabItem {
+                    Label("Recherche", systemImage: "magnifyingglass")
+                }
+                .tag(Tab.noConstruct)
         }
     }
+ 
 }
 
 struct ContentView_Previews: PreviewProvider {
