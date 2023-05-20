@@ -9,23 +9,23 @@ import SwiftUI
 
 struct BibliothequeView: View {
     var body: some View {
-        ZStack{
+        ZStack(alignment: .bottom){
             NavigationStack {
                
                     ScrollView{
                         ListFilterView()
-                        VStack{
-                            Text("Mis à jour récemment").font(.title2).bold()
+                        VStack(alignment: .leading){
+                            Text("Mis à jour récemment").font(.title2).bold().padding(.horizontal)
                             GridView()
                         }.padding(.vertical)
+                            .padding(.bottom, 64)
                     
                 }.navigationTitle("Bibliothèque")
+    
                    
-                
-                    // .navigationTitle("Podcast")
-                 }
-          //  PodcastPlayView().offset(y: 300)
-        }.frame(alignment: .bottom)
+                 }.accentColor(Colors.primary)
+            PodcastPlayView()
+        }
           
            
         

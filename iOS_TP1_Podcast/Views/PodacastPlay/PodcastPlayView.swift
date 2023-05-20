@@ -9,11 +9,22 @@ import SwiftUI
 
 struct PodcastPlayView: View {
     var body: some View {
-    
-        Rectangle().background(Material.ultraThin).frame(height: 60)//.foregroundColor(Colors.secondaryBackground)//.opacity(0.8).blur(radius: 2, opaque: true)
-        Label("Flag", systemImage: "flag.fill")
-            .padding()
-            .background(.ultraThinMaterial)
+        HStack{
+            ImageView(image: Image("OpenJazz"), width: 50, height: 50)
+                .padding(.leading, 20).padding(.vertical)
+            VStack(alignment: .leading){
+                Text("Podcasts")
+                    .font(.system(size: 14, design: .rounded)).padding(.bottom, 0.2).lineLimit(1)
+                Text("9 mai 2023") .opacity(0.6)
+                    .font(.system(size: 14, design: .rounded))
+            }
+            Spacer()
+            Image(systemName: "play.fill").padding(.horizontal, 5)
+            Image(systemName: "goforward.30").padding(.trailing, 15)
+               
+        }.frame( height: 64)
+        .background(.thinMaterial)
+      
     }
 }
 

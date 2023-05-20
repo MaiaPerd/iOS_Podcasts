@@ -21,7 +21,7 @@ struct ListDetailView: View {
                     .foregroundColor(Colors.primary)
                 Text(name).font(.title2).foregroundColor(Colors.textColor)
                 Spacer()
-                Image(systemName: "chevron.right").foregroundColor(.gray)
+                Image(systemName: "chevron.right").foregroundColor(.gray).bold().font(.system(size: 14)).opacity(0.6)
             }
         }.padding(.horizontal)
         

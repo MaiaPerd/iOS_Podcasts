@@ -15,7 +15,7 @@ struct PodcastView: View {
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
                   
-                        ButtonIconView(imageName: "ellipsis", themeColor: false)
+                        ButtonIconView(imageName: "ellipsis", themeColor: false, action: {}, padding: 6)
                     
                  
                 }

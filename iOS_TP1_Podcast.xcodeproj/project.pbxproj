@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C5A3FB22A17E2A20061405C /* PodcastPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A3FB12A17E2A20061405C /* PodcastPlayView.swift */; };
+		2C5A3FB42A19188A0061405C /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A3FB32A19188A0061405C /* ImageView.swift */; };
 		2CA6DD7E2A0E302F00A85777 /* PodcastsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6DD7D2A0E302F00A85777 /* PodcastsDetailView.swift */; };
 		2CA6DD802A0E322D00A85777 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6DD7F2A0E322D00A85777 /* Colors.xcassets */; };
 		2CA6DD822A0E323E00A85777 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6DD812A0E323E00A85777 /* Images.xcassets */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		2C5A3FB12A17E2A20061405C /* PodcastPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastPlayView.swift; sourceTree = "<group>"; };
+		2C5A3FB32A19188A0061405C /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		2CA6DD7D2A0E302F00A85777 /* PodcastsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsDetailView.swift; sourceTree = "<group>"; };
 		2CA6DD7F2A0E322D00A85777 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2CA6DD812A0E323E00A85777 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				2CA6DDA52A101F2100A85777 /* ButtonIconView.swift */,
 				2CA6DDBE2A1271F100A85777 /* DividerView.swift */,
+				2C5A3FB32A19188A0061405C /* ImageView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				2CA6DD9E2A0FE95500A85777 /* EpisodeEnum.swift in Sources */,
 				2CE533272A0D059500ACCAE5 /* iOS_TP1_PodcastApp.swift in Sources */,
 				2CA6DD9A2A0FAD4700A85777 /* PodcastStub.swift in Sources */,
+				2C5A3FB42A19188A0061405C /* ImageView.swift in Sources */,
 				2CA6DDAD2A10DA8900A85777 /* EpisodeDetailsView.swift in Sources */,
 				2CA6DDA42A10150400A85777 /* TopNavBarView.swift in Sources */,
 				2C5A3FB22A17E2A20061405C /* PodcastPlayView.swift in Sources */,

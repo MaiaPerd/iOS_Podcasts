@@ -18,6 +18,7 @@ struct EpisodeDetailView: View {
             Text(podcastEpisode.titre)
                 .font(.title3)
                 .fontWeight(.bold)
+            
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 3, trailing: 0))
             Text(podcastEpisode.description)
                 .lineLimit(3)

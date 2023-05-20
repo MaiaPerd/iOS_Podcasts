@@ -9,11 +9,17 @@ import SwiftUI
 
 struct GridView: View {
     var items: [Podcast] = PodcastStub.getListPodcast()
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
        
-            
-                Grid {
+        LazyVGrid(columns: columns) {
+                        ForEach(items, id: \.self) { item in
+                            JacquetDetailGridView(image: item.image, titre: item.titre, date: "il y a 1 j", size: (UIScreen.main.bounds.width - 50) / 2, podcast: item)
+                        }
+        }.padding(.horizontal)
+                    
+                /*Grid {
                     GridRow {
                         HStack{
                             JacquetDetailGridView(image: items.first!.image, titre: items.first!.titre, date: "il y a 1 j", podcast: items.first!)
@@ -35,7 +41,7 @@ struct GridView: View {
                         }.padding()
                     }
         
-                }
+                }*/
                 
         }
         

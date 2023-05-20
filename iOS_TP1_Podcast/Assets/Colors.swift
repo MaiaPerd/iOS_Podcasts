@@ -11,6 +11,7 @@ import SwiftUI
 struct Colors {
     static let primary = Color("Primary")
     static let background = Color("Background")
+    static let grey = Color("Grey")
     static let secondaryBackground = Color("SecondaryBackground")
     static let textColor = Color("TextColor")
 }

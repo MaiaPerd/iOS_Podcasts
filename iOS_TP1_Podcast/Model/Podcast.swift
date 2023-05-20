@@ -8,7 +8,15 @@
 import Foundation
 import SwiftUI
 
-public struct Podcast {
+public struct Podcast : Hashable{
+    public static func == (lhs: Podcast, rhs: Podcast) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+          hasher.combine(id)
+      }
+    
     let id: Int
     let titre: String
     let auteur: String

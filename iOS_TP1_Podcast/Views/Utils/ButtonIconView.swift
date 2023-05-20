@@ -13,31 +13,34 @@ struct ButtonIconView: View {
     
     var imageName: String
     var themeColor: Bool
+    var action: () -> Void
+    var padding: CGFloat
 
     var body: some View {
-        Button(action: {}){
+        Button(action: action){
             Image(systemName: imageName)
                 .foregroundColor(getIconColor())
                 .fontWeight(.bold)
+                .padding(.trailing, padding)
         }
         .frame(width: size, height: size, alignment: .center)
-            .background(getButtonColor())
+        .background(getButtonColor().opacity(0.6))
             .cornerRadius(radius)
     }
     
     func getButtonColor()->Color{
-        if themeColor { return .gray }
-        else { return .white }
+        if themeColor { return Colors.grey }
+        else { return Colors.secondaryBackground }
     }
     
     func getIconColor()->Color{
-        if themeColor { return .white }
+        if themeColor { return Colors.secondaryBackground }
         else { return Colors.primary }
     }
 }
 
 struct ButtonIconView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonIconView(imageName: "chevron.backward", themeColor: true)
+        ButtonIconView(imageName: "chevron.backward", themeColor: true, action: {}, padding: 0)
     }
 }

@@ -10,36 +10,20 @@ import SwiftUI
 struct TopNavBarView: View {
     
     @Environment(\.dismiss) private var dismiss
-    @State private var size: CGFloat = 30
-    @State private var radius: CGFloat = 20
-    
-    var themeColor = true
-    
-    func getButtonColor()->Color{
-        if themeColor { return .gray }
-        else { return .white }
-    }
-    
-    func getIconColor()->Color{
-        if themeColor { return .white }
-        else { return Colors.primary }
-    }
+    @State private var paddingHorizontal: CGFloat = 6
+    @State private var paddingVertical: CGFloat = 5
+    @State private var padding: CGFloat = 0
+    @State private var themeColor = true
+
     var body: some View {
         HStack{
-            Button(action: {dismiss()}){
-                Image(systemName: "chevron.backward")
-                    .foregroundColor(getIconColor())
-                    .fontWeight(.bold)
-            }
-            .frame(width: size, height: size, alignment: .center)
-                .background(getButtonColor())
-                .cornerRadius(radius)
-            //ButtonIconView(imageName: "chevron.backward", themeColor: true)
+            ButtonIconView(imageName: "chevron.backward", themeColor: themeColor, action: {dismiss()}, padding: padding)
             Spacer()
-            ButtonIconView(imageName: "checkmark", themeColor: true).padding(.horizontal,10)
-            ButtonIconView(imageName: "ellipsis", themeColor: true)
+            ButtonIconView(imageName: "arrow.down", themeColor: themeColor, action: {}, padding: padding).padding(.horizontal, paddingHorizontal)
+            ButtonIconView(imageName: "ellipsis", themeColor: themeColor, action: {}, padding: padding)
             
         }.padding(.horizontal)
+            .padding(.vertical, paddingVertical)
     }
 }
 

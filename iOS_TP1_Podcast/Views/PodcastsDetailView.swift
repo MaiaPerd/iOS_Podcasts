@@ -18,10 +18,12 @@ struct PodcastsDetailView: View {
     @State private var offset: CGFloat = 0
     @State private var startOffset: CGFloat = 0
     
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         
    
-        ZStack{
+        ZStack(alignment: .top){
             ScrollView(showsIndicators: true) {
                 VStack{
                     TopPodcastDetailsView(podcats: podcats)
@@ -99,7 +101,7 @@ struct PodcastsDetailView: View {
                         
                         return Color.clear
                     }.frame(width: 0,height: 0)
-                )
+                )            .padding(.bottom, 64)
             }
              //   .toolbarColorScheme(.dark, for: .navigationBar)
            // .toolbarBackground(.hidden, for: .navigationBar)
@@ -109,36 +111,56 @@ struct PodcastsDetailView: View {
             
            
             
-            TopNavBarView().offset(CGSize(width: 0, height: -350))//-280
-                .opacity(getDiplay())
-            /*TopEpisodesListView().offset(CGSize(width: 0, height: -336)).opacity(getDiplay2())*/
+           TopNavBarView()//.offset(CGSize(width: 0, height: -350))//-280
+               .opacity(getDiplay())
+            //(UIScreen.main.bounds.width - 40) / 2)
         }.toolbar {
-            /*ToolbarItem(placement: .navigationBarLeading){
-                Button(action: {}){
-                    Text("Retour").foregroundColor(Colors.primary).font(.body)
-                }
-            }*/
             ToolbarItem(placement: .navigationBarTrailing){
+            
                 HStack{
-                    ButtonIconView(imageName: "checkmark", themeColor: false)
-                    ButtonIconView(imageName: "ellipsis", themeColor: false)
+                   
+                    ButtonIconView(imageName: "arrow.down", themeColor: false, action: {}, padding: 7).padding(.horizontal, 6)
+                    ButtonIconView(imageName: "ellipsis", themeColor: false, action: {}, padding: 7)
+                    
                 }
+                  
             }
         }.navigationTitle(podcats.titre)  .navigationBarTitleDisplayMode(.inline)
-            .navigationBarHidden(getToolBarDisplay())
-            .navigationBarBackButtonHidden()
+          .navigationBarHidden(getToolBarDisplay())
+            .toolbarBackground(getVisibility(), for: .navigationBar)
               
     
     }
     
     func getDiplay()->Double{
-       /* if  (startOffset-20) < offset  {
-            return (offset-startOffset)*0.01
-        }*/
+        if  (startOffset-20) < offset  {
+            //UINavigationBar.appearance().backgroundColor = .secondarySystemBackground
+            //UINavigationBar.appearance().layer.opacity =  Float((offset-startOffset)*0.01)
+        }
         if offset < (startOffset-15) {
             return 1
         }
         return 0
+    }
+    
+    func getVisibility()->Visibility{
+       /* if  (startOffset-20) < offset  {
+            return (offset-startOffset)*0.01
+        }*/
+        if offset < (startOffset-15) {
+            return Visibility.hidden
+        }
+        return Visibility.visible
+    }
+    
+    func getDiplay2()->Double{
+       /* if  (startOffset-20) < offset  {
+            return (offset-startOffset)*0.01
+        }*/
+        if offset < (startOffset-15) {
+            return 0
+        }
+        return 1
     }
     
     func getToolBarDisplay()->Bool{
