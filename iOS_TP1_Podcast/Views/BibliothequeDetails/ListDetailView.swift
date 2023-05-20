@@ -23,7 +23,7 @@ struct ListDetailView: View {
                 Spacer()
                 Image(systemName: "chevron.right").foregroundColor(.gray)
             }
-        }
+        }.padding(.horizontal)
         
     }
 }

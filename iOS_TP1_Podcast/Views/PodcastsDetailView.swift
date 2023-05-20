@@ -17,7 +17,6 @@ struct PodcastsDetailView: View {
     
     @State private var offset: CGFloat = 0
     @State private var startOffset: CGFloat = 0
-    @State private var episodeOffset: CGFloat = 0
     
     var body: some View {
         
@@ -67,26 +66,13 @@ struct PodcastsDetailView: View {
                             DescriptionView(description: podcats.description, note: podcats.note, nbVote: podcats.nbVote, genre: podcats.genre)
                         }.padding(15)
                     }*/
-                   // EpisodeDetailView(podcastEpisode: podcats.episodes)
+                //EpisodeDetailView(podcastEpisode: podcats.episodes)
                     LazyVStack(pinnedViews: .sectionHeaders){
                         Section{
                             EpisodesListView(podcastListEpisodes: podcats.episodes)
                         } header: {
-                            TopEpisodesListView().overlay(
-                                GeometryReader{proxy -> Color in
-                                    let minY = proxy.frame(in: .global).minY
-                             
-                                    DispatchQueue.main.async {
-                                        if episodeOffset == 0 {
-                                            episodeOffset = minY
-                                        }
-                                  
-                                    }
-                                    
-                                    return Color.clear
-                                }.frame(width: 0,height: 0)
-                            ).padding(.vertical,0)
-                            Divider().padding(.leading,15)
+                            TopEpisodesListView()
+                            
                         }
                     }
                     /*TopEpisodesListView().overlay(
@@ -123,7 +109,7 @@ struct PodcastsDetailView: View {
             
            
             
-            TopNavBarView().offset(CGSize(width: 0, height: -350))//-300
+            TopNavBarView().offset(CGSize(width: 0, height: -350))//-280
                 .opacity(getDiplay())
             /*TopEpisodesListView().offset(CGSize(width: 0, height: -336)).opacity(getDiplay2())*/
         }.toolbar {
@@ -137,27 +123,22 @@ struct PodcastsDetailView: View {
                     ButtonIconView(imageName: "checkmark", themeColor: false)
                     ButtonIconView(imageName: "ellipsis", themeColor: false)
                 }
-             
             }
         }.navigationTitle(podcats.titre)  .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(getToolBarDisplay())
+            .navigationBarBackButtonHidden()
               
     
     }
     
     func getDiplay()->Double{
+       /* if  (startOffset-20) < offset  {
+            return (offset-startOffset)*0.01
+        }*/
         if offset < (startOffset-15) {
             return 1
         }
         return 0
-    }
-    
-    
-    func getDiplay2()->Double{
-        if offset < (episodeOffset-100) {
-            return 0
-        }
-        return 1
     }
     
     func getToolBarDisplay()->Bool{

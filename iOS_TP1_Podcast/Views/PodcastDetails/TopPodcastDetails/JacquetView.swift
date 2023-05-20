@@ -17,8 +17,13 @@ struct JacquetView: View {
     var body: some View {
         VStack{
             image.resizable().frame(width: 200,height: 200)
+                .overlay(
+                      RoundedRectangle(cornerRadius: 6)
+                        .stroke(.gray, lineWidth: 0.2)
+                  )
                 .cornerRadius(6)
-                .shadow(radius: 10)
+               
+                .shadow(radius: 12)
         
             Text(titre)
                 .fontWeight(.bold)
@@ -37,6 +42,6 @@ struct JacquetView: View {
 
 struct JacquetView_Previews: PreviewProvider {
     static var previews: some View {
-        JacquetView(image: Image(systemName: "photo"), titre: "", auteur: "")
+        JacquetView(image: Image("OpenJazz"), titre: "", auteur: "")
     }
 }

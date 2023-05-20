@@ -29,7 +29,6 @@ struct DescriptionView: View {
                     Text(" . ")
                     Text(rythme!)
                 }
-             
             }
         }
        
@@ -38,6 +37,6 @@ struct DescriptionView: View {
 
 struct DescriptionView_Previews: PreviewProvider {
     static var previews: some View {
-        DescriptionView(description: "decription", note: Float(0.0), nbVote: 0, genre: "")
+        DescriptionView(description: "description\n\ndescription nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn", note: Float(0.0), nbVote: 0, genre: "")
     }
 }

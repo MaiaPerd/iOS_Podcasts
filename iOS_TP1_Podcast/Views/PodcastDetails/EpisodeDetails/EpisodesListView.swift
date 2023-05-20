@@ -15,7 +15,7 @@ struct EpisodesListView: View {
       
                 ForEach(0..<podcastListEpisodes.count) {i in
                     EpisodeDetailView(podcastEpisode: podcastListEpisodes[i])
-                    Divider().padding(.leading,15)
+                    DividerView()
                 }.frame(maxWidth: .infinity,alignment: .leading)
         
        

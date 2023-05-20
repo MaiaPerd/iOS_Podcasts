@@ -9,8 +9,8 @@ import SwiftUI
 
 struct BibliothequeView: View {
     var body: some View {
-   
-            NavigationView {
+        ZStack{
+            NavigationStack {
                
                     ScrollView{
                         ListFilterView()
@@ -24,6 +24,9 @@ struct BibliothequeView: View {
                 
                     // .navigationTitle("Podcast")
                  }
+          //  PodcastPlayView().offset(y: 300)
+        }.frame(alignment: .bottom)
+          
            
         
     }

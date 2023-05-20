@@ -19,7 +19,7 @@ public struct Podcast {
     let rythme: String?
     let episodes: [PodcastEpisode]
 
-    private let imageName: String
+    let imageName: String
     var image: Image {
         Image(imageName)
     }

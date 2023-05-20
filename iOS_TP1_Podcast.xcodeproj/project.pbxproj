@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C5A3FB22A17E2A20061405C /* PodcastPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A3FB12A17E2A20061405C /* PodcastPlayView.swift */; };
 		2CA6DD7E2A0E302F00A85777 /* PodcastsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6DD7D2A0E302F00A85777 /* PodcastsDetailView.swift */; };
 		2CA6DD802A0E322D00A85777 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6DD7F2A0E322D00A85777 /* Colors.xcassets */; };
 		2CA6DD822A0E323E00A85777 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6DD812A0E323E00A85777 /* Images.xcassets */; };
@@ -31,6 +32,8 @@
 		2CA6DDB82A1146F100A85777 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6DDB72A1146F100A85777 /* GridView.swift */; };
 		2CA6DDBA2A11477600A85777 /* JacquetDetailGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6DDB92A11477600A85777 /* JacquetDetailGridView.swift */; };
 		2CA6DDBD2A11675D00A85777 /* PodcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6DDBC2A11675D00A85777 /* PodcastView.swift */; };
+		2CA6DDBF2A1271F100A85777 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6DDBE2A1271F100A85777 /* DividerView.swift */; };
+		2CA6DDC42A12787F00A85777 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6DDC32A12787F00A85777 /* UIImageExtension.swift */; };
 		2CE533272A0D059500ACCAE5 /* iOS_TP1_PodcastApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE533262A0D059500ACCAE5 /* iOS_TP1_PodcastApp.swift */; };
 		2CE533292A0D059500ACCAE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE533282A0D059500ACCAE5 /* ContentView.swift */; };
 		2CE5332B2A0D059700ACCAE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5332A2A0D059700ACCAE5 /* Assets.xcassets */; };
@@ -58,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C5A3FB12A17E2A20061405C /* PodcastPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastPlayView.swift; sourceTree = "<group>"; };
 		2CA6DD7D2A0E302F00A85777 /* PodcastsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsDetailView.swift; sourceTree = "<group>"; };
 		2CA6DD7F2A0E322D00A85777 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2CA6DD812A0E323E00A85777 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		2CA6DDB72A1146F100A85777 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		2CA6DDB92A11477600A85777 /* JacquetDetailGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JacquetDetailGridView.swift; sourceTree = "<group>"; };
 		2CA6DDBC2A11675D00A85777 /* PodcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastView.swift; sourceTree = "<group>"; };
+		2CA6DDBE2A1271F100A85777 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		2CA6DDC32A12787F00A85777 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		2CE533232A0D059500ACCAE5 /* iOS_TP1_Podcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_TP1_Podcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE533262A0D059500ACCAE5 /* iOS_TP1_PodcastApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_TP1_PodcastApp.swift; sourceTree = "<group>"; };
 		2CE533282A0D059500ACCAE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,9 +125,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C5A3FB02A17E27B0061405C /* PodacastPlay */ = {
+			isa = PBXGroup;
+			children = (
+				2C5A3FB12A17E2A20061405C /* PodcastPlayView.swift */,
+			);
+			path = PodacastPlay;
+			sourceTree = "<group>";
+		};
 		2CA6DD7A2A0E2EFE00A85777 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C5A3FB02A17E27B0061405C /* PodacastPlay */,
 				2CA6DDBB2A11672500A85777 /* PodcastGridDetails */,
 				2CA6DDB22A1142D200A85777 /* BibliothequeDetails */,
 				2CA6DDAB2A10DA5200A85777 /* Utils */,
@@ -197,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				2CA6DDA52A101F2100A85777 /* ButtonIconView.swift */,
+				2CA6DDBE2A1271F100A85777 /* DividerView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -217,6 +233,14 @@
 				2CA6DDB92A11477600A85777 /* JacquetDetailGridView.swift */,
 			);
 			path = PodcastGridDetails;
+			sourceTree = "<group>";
+		};
+		2CA6DDC22A12786700A85777 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2CA6DDC32A12787F00A85777 /* UIImageExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		2CE5331A2A0D059500ACCAE5 = {
@@ -242,6 +266,7 @@
 		2CE533252A0D059500ACCAE5 /* iOS_TP1_Podcast */ = {
 			isa = PBXGroup;
 			children = (
+				2CA6DDC22A12786700A85777 /* Extension */,
 				2CA6DD982A0FAD3700A85777 /* Stub */,
 				2CA6DD7C2A0E2F5100A85777 /* Model */,
 				2CA6DD7B2A0E2F1600A85777 /* Assets */,
@@ -416,6 +441,7 @@
 				2CA6DD8D2A0E42FA00A85777 /* EpisodeDetailView.swift in Sources */,
 				2CE533292A0D059500ACCAE5 /* ContentView.swift in Sources */,
 				2CA6DD862A0E3A5500A85777 /* Colors.swift in Sources */,
+				2CA6DDC42A12787F00A85777 /* UIImageExtension.swift in Sources */,
 				2CA6DDBD2A11675D00A85777 /* PodcastView.swift in Sources */,
 				2CA6DDB12A10DAEF00A85777 /* TopPodcastDetailsView.swift in Sources */,
 				2CA6DDB62A11435A00A85777 /* ListDetailView.swift in Sources */,
@@ -424,7 +450,9 @@
 				2CA6DD9A2A0FAD4700A85777 /* PodcastStub.swift in Sources */,
 				2CA6DDAD2A10DA8900A85777 /* EpisodeDetailsView.swift in Sources */,
 				2CA6DDA42A10150400A85777 /* TopNavBarView.swift in Sources */,
+				2C5A3FB22A17E2A20061405C /* PodcastPlayView.swift in Sources */,
 				2CA6DD8F2A0E430C00A85777 /* EpisodesListView.swift in Sources */,
+				2CA6DDBF2A1271F100A85777 /* DividerView.swift in Sources */,
 				2CA6DD912A0F715600A85777 /* NoView.swift in Sources */,
 				2CA6DDB82A1146F100A85777 /* GridView.swift in Sources */,
 				2CA6DDA02A0FEA1000A85777 /* PodcastEpisode.swift in Sources */,
@@ -593,6 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS_TP1_Podcast/Preview Content\"";
+				DEVELOPMENT_TEAM = H3N8FVR3N5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -621,6 +650,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS_TP1_Podcast/Preview Content\"";
+				DEVELOPMENT_TEAM = H3N8FVR3N5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

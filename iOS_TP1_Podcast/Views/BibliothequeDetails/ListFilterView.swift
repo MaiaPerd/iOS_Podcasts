@@ -10,16 +10,17 @@ import SwiftUI
 struct ListFilterView: View {
     var body: some View {
         VStack{
+            DividerView()
             ListDetailView(imageName: "square.stack", name: "Podcasts")
-            Divider()
+            DividerView()
             ListDetailView(imageName: "checklist.unchecked", name: "Chaînes")
-            Divider()
+            DividerView()
             ListDetailView(imageName: "bookmark", name: "Enregistrés")
-            Divider()
+            DividerView()
             ListDetailView(imageName: "arrow.down.circle", name: "Téléchargés")
-            Divider()
+            DividerView()
             ListDetailView(imageName: "clock", name: "Derniers épisodes")
-        }.padding(.horizontal)
+        }
     }
 }
 

@@ -28,6 +28,12 @@ struct GridView: View {
                             JacquetDetailGridView(image: items[3].image, titre: items[3].titre, date: "il y a 1 j", podcast: items[3])
                         }.padding()
                     }
+                    GridRow {
+                        HStack{
+                            JacquetDetailGridView(image: items[4].image, titre: items[4].titre, date: "il y a 1 j", podcast: items[4])
+                            Spacer()
+                        }.padding()
+                    }
         
                 }
                 
