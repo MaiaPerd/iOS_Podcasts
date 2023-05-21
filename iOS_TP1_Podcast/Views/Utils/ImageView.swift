@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct ImageView: View {
+    @State private var cornerRadius: CGFloat = 6
+    @State private var lineWidth: CGFloat = 0.2
+    @State private var shadow: CGFloat = 12
+    
+    
     var image: Image
     var width: CGFloat
     var height: CGFloat
     
     var body: some View {
-        image.resizable().frame(width: width,height: height)
+        image.resizable()
+            .frame(width: width,height: height)
             .overlay(
-                  RoundedRectangle(cornerRadius: 6)
-                    .stroke(.gray, lineWidth: 0.2)
-              )
-            .cornerRadius(6)
-            .shadow(radius: 12)
+                  RoundedRectangle(cornerRadius: cornerRadius)
+                    .stroke(.gray, lineWidth: lineWidth)
+            )
+            .cornerRadius(cornerRadius)
+            .shadow(radius: shadow)
     }
 }
 

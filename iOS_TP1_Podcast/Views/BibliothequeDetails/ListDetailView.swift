@@ -8,23 +8,29 @@
 import SwiftUI
 
 struct ListDetailView: View {
-    @State private var fontSize = 12.0
+    @State private var fontSize = 14.0
+    @State private var opacity = 0.6
     
     var imageName: String
     var name: String
     
     var body: some View {
         NavigationLink(destination: PodcastView()){
-            HStack{
+            HStack(alignment: .center){
                 Image(systemName: imageName)
                     .font(.title2)
                     .foregroundColor(Colors.primary)
-                Text(name).font(.title2).foregroundColor(Colors.textColor)
+                Text(name)
+                    .font(.title2)
+                    .foregroundColor(Colors.textColor)
                 Spacer()
-                Image(systemName: "chevron.right").foregroundColor(.gray).bold().font(.system(size: 14)).opacity(0.6)
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.gray)
+                    .bold()
+                    .font(.system(size: fontSize))
+                    .opacity(opacity)
             }
         }.padding(.horizontal)
-        
     }
 }
 

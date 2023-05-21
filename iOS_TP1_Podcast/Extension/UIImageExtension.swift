@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Source: https://dev.to/neriusv/selecting-colors-using-an-image-in-swift-27l9
 extension UIImage {
     
     var dominantColor: UIColor? {
@@ -20,9 +21,6 @@ extension UIImage {
         }
         return mainColor
     }
-    
-    // https://dev.to/neriusv/selecting-colors-using-an-image-in-swift-27l9
-    
     
     func resized(to size : CGSize) -> UIImage {
             let format = UIGraphicsImageRendererFormat()

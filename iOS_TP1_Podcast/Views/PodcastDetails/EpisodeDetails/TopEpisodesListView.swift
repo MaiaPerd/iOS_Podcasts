@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TopEpisodesListView: View {
-    
+    @State private var frameHeight: CGFloat = 50
     @State private var selectedEpisode: EpisodeEnum = .allEpisode
 
     var body: some View {
@@ -32,7 +32,7 @@ struct TopEpisodesListView: View {
             Spacer()
             Text("Tout voir").foregroundColor(Colors.primary)
         }.padding(.horizontal)
-            .frame(height: 50)
+            .frame(height: frameHeight)
             .background(Colors.background)
     }
 }

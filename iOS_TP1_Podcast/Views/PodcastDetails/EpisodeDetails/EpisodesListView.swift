@@ -12,14 +12,10 @@ struct EpisodesListView: View {
     var podcastListEpisodes: [PodcastEpisode]
     
     var body: some View {
-      
-                ForEach(0..<podcastListEpisodes.count) {i in
-                    EpisodeDetailView(podcastEpisode: podcastListEpisodes[i])
-                    DividerView()
-                }.frame(maxWidth: .infinity,alignment: .leading)
-        
-       
-    
+        ForEach(podcastListEpisodes, id: \.self) { podcastEp in
+            EpisodeDetailView(podcastEpisode: podcastEp)
+            DividerView()
+        }.frame(maxWidth: .infinity,alignment: .leading)
     }
 }
 

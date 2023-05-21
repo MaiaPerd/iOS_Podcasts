@@ -10,6 +10,7 @@ import SwiftUI
 struct ButtonIconView: View {
     @State private var size: CGFloat = 30
     @State private var radius: CGFloat = 20
+    @State private var opacity: CGFloat = 0.6
     
     var imageName: String
     var themeColor: Bool
@@ -22,9 +23,9 @@ struct ButtonIconView: View {
                 .foregroundColor(getIconColor())
                 .fontWeight(.bold)
                 .padding(.trailing, padding)
-        }
-        .frame(width: size, height: size, alignment: .center)
-        .background(getButtonColor().opacity(0.6))
+        }.frame(width: size, height: size, alignment: .center)
+            .background(getButtonColor()
+            .opacity(opacity))
             .cornerRadius(radius)
     }
     

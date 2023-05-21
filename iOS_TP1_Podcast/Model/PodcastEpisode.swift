@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-public struct PodcastEpisode {
+public struct PodcastEpisode: Hashable {
     let id: Int
     let titre: String
     let date: Date
@@ -25,5 +25,15 @@ public struct PodcastEpisode {
         self.heures = heures
         self.minutes = minutes
     }
+    
+    
+    public static func == (lhs: PodcastEpisode, rhs: PodcastEpisode) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+          hasher.combine(id)
+      }
+    
 
 }

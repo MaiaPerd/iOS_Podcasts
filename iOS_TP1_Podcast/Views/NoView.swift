@@ -14,22 +14,9 @@ struct NoView: View {
             Text("La page :")
             Text(title)
             Text("n'existe pas !")
-            
-         //   Image("LeCodeAChange")
-                
-                //.drawingGroup(opaque: true)
-            
-            
-          //  Image("LeCodeAChange").brightness(0.4)
-            //Image("LeCodeAChange").blur(radius: 4)
         }
      
         
-    }
-    
-    func recuperecolor()->Color{
-        //CIFilter.
-        return Color.red
     }
 }
 

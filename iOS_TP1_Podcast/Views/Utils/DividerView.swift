@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct DividerView: View {
+    @State private var padding: CGFloat = 0
+    @State private var leadingPadding: CGFloat = 0.6
+    
     var body: some View {
-        Divider().padding(.leading, 15)
+        Divider().padding(.leading, leadingPadding).padding(padding)
     }
 }
 

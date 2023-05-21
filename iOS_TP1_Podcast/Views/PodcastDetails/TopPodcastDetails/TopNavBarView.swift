@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TopNavBarView: View {
-    
     @Environment(\.dismiss) private var dismiss
     @State private var paddingHorizontal: CGFloat = 6
     @State private var paddingVertical: CGFloat = 5

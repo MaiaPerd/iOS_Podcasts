@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct PodcastView: View {
+    @State private var bottomPadding: CGFloat = 64
+    @State private var buttonPadding: CGFloat = 6
+    
     var body: some View {
         ScrollView{
-            GridView()
+            GridView(items: PodcastStub.getListPodcast())
+                .padding(.bottom, bottomPadding)
         }.navigationTitle("Podcast")
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
-                  
-                        ButtonIconView(imageName: "ellipsis", themeColor: false, action: {}, padding: 6)
-                    
-                 
+                    ButtonIconView(imageName: "ellipsis", themeColor: false, action: {}, padding: buttonPadding)
                 }
-                
             }
     }
 }
