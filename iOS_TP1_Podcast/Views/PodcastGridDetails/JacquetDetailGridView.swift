@@ -30,13 +30,20 @@ struct JacquetDetailGridView: View {
                     .foregroundColor(Colors.textColor)
                     .font(.system(size: textSize, design: .rounded))
                     
-                Text("Mise à jour: "+date)
+                Text("Mise à jour: Il y a \(dateLastChange())")
                     .foregroundColor(.gray)
                     .font(.system(size: textSize, design: .rounded))
-    
             }
         }
-       
+    }
+    
+    private func dateLastChange()->String {
+        let date = podcast.episodes.first?.date
+        let difference = Calendar.current.dateComponents([.day, .hour], from: date!, to: Date.now)
+        if difference.day ?? 0 < 1 {
+            return "\(difference.hour!) h"
+        }
+        return "\(difference.day!) j"
     }
 }
 

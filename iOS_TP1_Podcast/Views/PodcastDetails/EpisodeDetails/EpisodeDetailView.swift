@@ -49,20 +49,19 @@ struct EpisodeDetailView: View {
     }
     
     private func dateEpisode()->Text {
-        /*let ecart: (Int, Int, Int, Int) = secondesEnJoursHeuresMinutesSecondes(secondes: podcastEpisode.date.distance(to: Date.now))
-        
-        if ecart.0 < 7 {
-            if ecart.0 < 1 {
-                if ecart.1 < 1 {
-                    if ecart.2 < 1{
-                        return Text("Il y a \(ecart.3) s".uppercased())
+        let difference = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: podcastEpisode.date, to: Date.now)
+        if difference.day ?? 0 < 7 {
+            if difference.day ?? 0 < 1 {
+                if difference.hour ?? 0 < 1 {
+                    if difference.minute ?? 0 < 1{
+                        return Text("Il y a \(difference.second ?? 0) s".uppercased())
                     }
-                    return Text("Il y a \(ecart.2) min".uppercased())
+                    return Text("Il y a \(difference.minute ?? 0) min".uppercased())
                 }
-                return Text("Il y a \(ecart.1) h".uppercased())
+                return Text("Il y a \(difference.hour ?? 0) h".uppercased())
             }
-            return Text("Il y a \(ecart.0) j".uppercased())
-        }*/
+            return Text("Il y a \(difference.day ?? 0) j".uppercased())
+        }
         return Text(podcastEpisode.date, format: .dateTime.day().month())
     }
     
@@ -75,6 +74,6 @@ struct EpisodeDetailView: View {
 
 struct EpisodeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        EpisodeDetailView(podcastEpisode: PodcastStub.getListPodcastEpisode()[3])
+        EpisodeDetailView(podcastEpisode: PodcastStub.getListPodcastEpisode()[2])
     }
 }
