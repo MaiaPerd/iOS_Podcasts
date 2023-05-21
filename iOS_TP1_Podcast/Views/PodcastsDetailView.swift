@@ -12,6 +12,7 @@ struct PodcastsDetailView: View {
     @State private var paddingBottom: CGFloat = 64
     @State private var paddingButton: CGFloat = 7
     @State private var horrizontalPadding: CGFloat = 6
+    @State private var size: CGFloat = 10
     
     var podcats: Podcast
     
@@ -60,8 +61,13 @@ struct PodcastsDetailView: View {
         }.toolbar {
             ToolbarItem(placement: .navigationBarTrailing){
                 HStack{
-                    ButtonIconView(imageName: "arrow.down", themeColor: false, action: {}, padding: paddingButton)
-                        .padding(.horizontal, horrizontalPadding)
+                    ZStack(alignment: .bottomTrailing){
+                        ButtonIconView(imageName: "arrow.down", themeColor: false, action: {}, padding: paddingButton)
+                            .padding(.horizontal, horrizontalPadding)
+                        Image(systemName: "pause.circle.fill")
+                            .foregroundColor(Colors.primary).frame(width: size, height: size)
+                    }
+                    
                     ButtonIconView(imageName: "ellipsis", themeColor: false, action: {}, padding: paddingButton)
                 }
             }

@@ -13,12 +13,17 @@ struct TopNavBarView: View {
     @State private var paddingVertical: CGFloat = 5
     @State private var padding: CGFloat = 0
     @State private var themeColor = true
+    @State private var size: CGFloat = 10
 
     var body: some View {
         HStack{
             ButtonIconView(imageName: "chevron.backward", themeColor: themeColor, action: {dismiss()}, padding: padding)
             Spacer()
-            ButtonIconView(imageName: "arrow.down", themeColor: themeColor, action: {}, padding: padding).padding(.horizontal, paddingHorizontal)
+            ZStack(alignment: .bottomTrailing){
+                ButtonIconView(imageName: "arrow.down", themeColor: themeColor, action: {}, padding: padding).padding(.horizontal, paddingHorizontal)
+                Image(systemName: "pause.circle.fill")
+                    .foregroundColor(Colors.background).frame(width: size, height: size)
+            }
             ButtonIconView(imageName: "ellipsis", themeColor: themeColor, action: {}, padding: padding)
             
         }.padding(.horizontal)
