@@ -7,8 +7,7 @@ Le projet est une reproduction partiel de l'application Podcasts de l'iPhone sou
 # Sommaire
 
 - [Requirements](#requirements)
-- [Installation](#installation)
-    - [Lancement:](#lancement)
+- [Lancement:](#lancement)
 - [Auteurs](#auteurs)
 
 # Requirements
