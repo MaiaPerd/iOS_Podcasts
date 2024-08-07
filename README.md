@@ -2,7 +2,7 @@
 
 Bienvenue sur l'émulation de l'application Podcasts
 
-Le projet est une reproduction partiel de l'application Podcasts de l'iPhone sous iOS.
+Le projet est une reproduction partielle de l'application Podcasts de l'iPhone sous iOS.
 
 # Sommaire
 
@@ -12,7 +12,7 @@ Le projet est une reproduction partiel de l'application Podcasts de l'iPhone sou
 
 # Requirements
 
-Le projet est en **swiftui**, je vous conseille de le lancé sur **xcode**.
+Le projet est en **swiftui**, je vous conseille de le lancer sur **xcode**.
 
 ## Lancement:
 
